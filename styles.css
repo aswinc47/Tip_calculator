@@ -1,0 +1,286 @@
+/* - Very dark cyan: hsl(183, 100%, 15%)
+- Dark grayish cyan: hsl(186, 14%, 43%)
+- Grayish cyan: hsl(184, 14%, 56%)
+- Light grayish cyan: 
+- Very light grayish cyan: hsl(189, 41%, 97%)
+- White: hsl */
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+@media screen and (max-width: 500px){
+    body .logo{
+        margin-block: 40px 30px;
+    }
+    
+    section .main{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    body section{
+        width: 100%;
+    }
+    .main .inputs{
+        width: 100%;
+        padding-inline: 30px;
+        margin: 0px;
+    }
+    .inputs .bill-main{
+        margin-bottom: 20px;
+    }
+    .tips .share{
+        width: 47%;
+    }
+    .main .tip-main{
+        margin-bottom: 20px;
+    }
+
+    input{
+        box-sizing: border-box;
+    }
+
+    .bill-main .bill-input{
+        width: 100%;
+    }
+    .people-main .people-input{
+        width: 100%;
+    }
+
+    .bill span{
+        display: none;
+    }
+
+    .inputs .people-main{
+        margin-bottom: 20px;
+    }
+
+    .main .result-main{
+        width: 90%;
+        margin-left: 0px;
+        padding: 20px;
+    }
+
+    .results .result-display h1{
+        font-size: 1.8em;
+        margin-block: 8px;
+    }
+
+    .result-btn-div .reset-btn{
+        margin-top: 20px;
+        padding-block: 10px;
+    }
+
+
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    margin: 0px;
+    font-family: "Space Mono";
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    min-height: 50vh;
+}
+.bill{
+    font-size: 13px;
+    font-weight: 700;
+    color: hsl(184, 14%, 43%)
+}
+
+.invalid{
+    color: rgb(254, 84, 84);
+    display: none;
+}
+
+.invalid-people{
+    outline: 2px solid;
+    outline-color: rgb(254, 84, 84);
+}
+
+.invalid-people:focus{
+    outline-color: rgb(254, 84, 84);
+}
+
+button:hover{
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%) ;
+}
+
+.main{
+    width: 45%;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 25px;
+    display: flex;
+}
+
+.inputs{
+    width: 50%;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tips{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.share{
+    padding: 0px;
+    width: 90px;
+    border: 0px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: hsl(183, 100%, 15%) ;
+    color: hsl(189, 41%, 97%);
+}
+
+.shareinput{
+    padding: 0px;
+    width: 90px;
+    border: 0px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Space Mono";
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 600;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+}
+.shareinput:focus{
+    outline-color: hsl(172, 67%, 45%);
+}
+
+.share h3{
+    margin-block: 5px;
+    font-size: 17px;
+    font-family: 'Space Mono';
+}
+
+.people-label{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bill-input{
+    background-image: url("./images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    text-align: right;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%) ;
+    width: 90%;
+    padding: 10px 20px;
+    background-position-y: center;
+    background-position-x: 10px;
+    border-radius: 5px;
+    font-family: "Space Mono";
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+}
+.bill-input:focus{
+    outline-color: hsl(172, 67%, 45%);
+}
+
+.people-input{
+    background-image: url("./images/icon-person.svg");
+    background-repeat: no-repeat;
+    text-align: right;
+    border: none;
+    background-color: hsl(189, 41%, 97%);
+    width: 90%;
+    padding: 10px 20px;
+    background-position-y: center;
+    background-position-x: 10px;
+    border-radius: 5px;
+    font-family: "Space Mono";
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    color: hsl(183, 100%, 15%) ;
+}
+
+.people-input:focus{
+    outline-color: hsl(172, 67%, 45%);
+}
+
+.result-main{
+    width: 50%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    padding: 30px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.results{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.result-display img{
+    height: 20px;
+}
+
+.reset-btn{
+    width: 100%;
+    background-color: hsl(172, 67%, 45%) ;
+    border-radius: 3px;
+    border: none;
+    padding-block: 10px;
+    font-family: "Space Mono";
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.reset-btn:disabled{
+    opacity: 0.2;
+}
+
+
+.labels h2{
+    margin: 0px;
+    font-size: 13px;
+    color: hsl(189, 41%, 97%);
+}
+.labels h3{
+    margin: 0px;
+    font-size: 12px;
+    color: hsl(184, 14%, 56%);
+}
+
+.result-display{
+    color: hsl(172, 67%, 45%);
+    display: flex;
+    align-items: center;
+}
+.result-display h1{
+    font-size: 2em;
+    margin-block: 10px;
+}
+
+.tip-selected{
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
